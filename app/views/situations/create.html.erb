@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Proxima Fatura:</b>
+  <%= @proxima_fatura %>
+</p>
+
+<p>
+  <b>Renda:</b>
+  <%= @situation.renda %>
+</p>
+
+<p>
+  <b>Custo:</b>
+  <%= @situation.custo %>
+</p>
+
+<p>
+  <b>Total devedor:</b>
+  <%= @situation.total_devedor %>
+</p>
+
+<p>
+  <b>Juros:</b>
+  <%= @situation.juros %>
+</p>
+
+<p>
+  <b>Minimo fatura:</b>
+  <%= @situation.minimo_fatura %>
+</p>
+
+
+<%= link_to 'Back', situations_path %>

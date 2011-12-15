@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  renda: 9.99
+  custo: 9.99
+  total_devedor: 9.99
+  juros: 1.5
+  minimo_fatura: 9.99
+
+two:
+  renda: 9.99
+  custo: 9.99
+  total_devedor: 9.99
+  juros: 1.5
+  minimo_fatura: 9.99

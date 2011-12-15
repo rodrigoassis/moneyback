@@ -1,0 +1,37 @@
+<%= form_for(@situation) do |f| %>
+  <% if @situation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@situation.errors.count, "erro") %> proíbem de avaliarmos a sua dívida:</h2>
+
+      <ul>
+      <% @situation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :renda %><br />
+    <%= f.text_field :renda %>
+  </div>
+  <div class="field">
+    <%= f.label :custo %><br />
+    <%= f.text_field :custo %>
+  </div>
+  <div class="field">
+    <%= f.label :total_devedor %><br />
+    <%= f.text_field :total_devedor %>
+  </div>
+  <div class="field">
+    <%= f.label :juros %><br />
+    <%= f.text_field :juros %>
+  </div>
+  <div class="field">
+    <%= f.label :minimo_fatura %><br />
+    <%= f.text_field :minimo_fatura %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

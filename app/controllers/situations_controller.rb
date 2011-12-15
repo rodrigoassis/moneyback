@@ -16,7 +16,6 @@ class SituationsController < ApplicationController
   def create
     @situation = Situation.new(params[:situation])
     
-    
     respond_to do |format|
       if @situation.save
         @proxima_fatura = (@situation.total_devedor - (@situation.renda - @situation.custo)) * (1+@situation.juros)

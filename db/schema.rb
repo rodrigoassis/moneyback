@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(:version => 20111215122937) do
 
   create_table "situations", :force => true do |t|
-    t.decimal  "renda"
-    t.decimal  "custo"
-    t.decimal  "total_devedor"
+    t.decimal  "renda",         :precision => 10, :scale => 0
+    t.decimal  "custo",         :precision => 10, :scale => 0
+    t.decimal  "total_devedor", :precision => 10, :scale => 0
     t.float    "juros"
-    t.decimal  "minimo_fatura"
+    t.decimal  "minimo_fatura", :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

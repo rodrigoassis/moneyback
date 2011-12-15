@@ -14,12 +14,12 @@ class SituationsController < ApplicationController
   end
   
   def create
-    
     @situation = Situation.new(params[:situation])
-    @proxima_fatura = (@situation.total_devedor - (@situation.renda - @situation.custo)) * (1+@situation.juros)
+    
     
     respond_to do |format|
       if @situation.save
+        @proxima_fatura = (@situation.total_devedor - (@situation.renda - @situation.custo)) * (1+@situation.juros)
         format.html # create.html.erb
       else
         format.html { render action: "index" }

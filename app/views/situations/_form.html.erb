@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :renda %><br />
-    <%= f.text_field :renda %>
+    <%= f.label :renda, "Renda Disponível" %><br />
+    R$ <%= f.text_field :renda %>
   </div>
   <div class="field">
-    <%= f.label :custo %><br />
-    <%= f.text_field :custo %>
+    <%= f.label :custo, "Custos Fixos"%><br />
+    R$ <%= f.text_field :custo %>
   </div>
   <div class="field">
-    <%= f.label :total_devedor %><br />
-    <%= f.text_field :total_devedor %>
+    <%= f.label :total_devedor, "Total da sua dívida com o Cartão"%><br />
+    R$ <%= f.text_field :total_devedor %>
   </div>
   <div class="field">
-    <%= f.label :juros %><br />
-    <%= f.text_field :juros %>
+    <%= f.label :juros, "Juros do cartão" %><br />
+    % <%= f.text_field :juros %>
   </div>
   <div class="field">
-    <%= f.label :minimo_fatura %><br />
-    <%= f.text_field :minimo_fatura %>
+    <%= f.label :minimo_fatura, "Mínimo a ser pago pela fatura" %><br />
+    R$ <%= f.text_field :minimo_fatura %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Calcular"%>
   </div>
 <% end %>

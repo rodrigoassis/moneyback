@@ -17,8 +17,14 @@ class SituationsController < ApplicationController
     
     respond_to do |format|
       if @situation.save
-        @proxima_fatura = (@situation.total_devedor - (@situation.renda - @situation.custo)) * (1+@situation.juros)
-        format.html # create.html.erb
+        @valor_disponivel = @situation.renda - @situation.custo
+        @proxima_fatura = (@situation.total_devedor - @valor_disponivel) * (1+(@situation.juros/100))
+        
+        if @proxima_fatura > @valor_disponivel
+          format.html { render "multiple_months" }
+        else
+          format.html { render "single_month" }
+        end        
       else
         format.html { render action: "index" }
       end

@@ -3,7 +3,6 @@
 class SituationsController < ApplicationController
   # GET /situations
   # GET /situations.json
-  
   def index
     @situation = Situation.new
 

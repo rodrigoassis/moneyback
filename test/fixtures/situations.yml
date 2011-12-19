@@ -8,8 +8,8 @@ one:
   minimo_fatura: 9.99
 
 two:
-  renda: 9.99
-  custo: 9.99
-  total_devedor: 9.99
-  juros: 1.5
-  minimo_fatura: 9.99
+  renda: 99.99
+  custo: 99.99
+  total_devedor: 99.99
+  juros: 19.5
+  minimo_fatura: 99.99

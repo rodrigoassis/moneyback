@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sua situação é a seguinte:</h1>
+
+<p>
+  <b>Renda Disponível:</b>
+  R$ <%= @situation.renda %>
+</p>
+
+<p>
+  <b>Custos Fixos:</b>
+  R$ <%= @situation.custo %>
+</p>
+
+<p>
+  <b>Total da sua dívida com o Cartão:</b>
+  R$ <%= @situation.total_devedor %>
+</p>
+
+<p>
+  <b>Fatura deste mês do cartão:</b>
+  R$ <%= @situation.fatura %>
+</p>
+
+<p>
+  <b>Juros do cartão:</b>
+  R$ <%= @situation.juros %>
+</p>
+
+<p>
+  <b>Mínimo a ser pago pela fatura:</b>
+  R$ <%= @situation.minimo_fatura %>
+</p>
+
+<hr>
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215122937) do
+ActiveRecord::Schema.define(:version => 20111219105849) do
 
   create_table "situations", :force => true do |t|
     t.decimal  "renda",         :precision => 10, :scale => 0
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20111215122937) do
     t.decimal  "minimo_fatura", :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "fatura",        :precision => 10, :scale => 0
   end
 
 end

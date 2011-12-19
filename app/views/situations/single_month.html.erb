@@ -1,34 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-	Sua situação é a seguinte:
-</p>
-<p>
-  <b>Renda:</b>
-  R$ <%= @situation.renda %>
-</p>
-
-<p>
-  <b>Custo:</b>
-  R$ <%= @situation.custo %>
-</p>
-
-<p>
-  <b>Total devedor:</b>
-  R$ <%= @situation.total_devedor %>
-</p>
-
-<p>
-  <b>Juros:</b>
-  R$ <%= @situation.juros %>
-</p>
-
-<p>
-  <b>Minimo fatura:</b>
-  R$ <%= @situation.minimo_fatura %>
-</p>
-
-<hr>
+<%= render 'situation' %>
 
 <h1>Passo 1:</h1>
 <p>
@@ -38,14 +8,14 @@
 
 <h1>Passo 2:</h1>
 <p>
-	Pague a sua próxima fatura.<br />
-	<b>Proxima Fatura:</b>
- 	R$ <%= @proxima_fatura %>
+	Pague a sua dívida.<br />
+	<b>Dívida:</b>
+ 	R$ <%= @divida %>
 </p>
 
 <h1>Passo 3:</h1>
 <p>
-	Guarde o valor restante em sua conta e não gaste!<br />
+	Se sobrar algum valor, guarde o valor restante em sua conta não contraia mais dívidas!<br />
 </p>
 
 

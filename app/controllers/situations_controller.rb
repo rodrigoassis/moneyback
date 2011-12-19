@@ -17,14 +17,22 @@ class SituationsController < ApplicationController
     
     respond_to do |format|
       if @situation.save
-        @valor_disponivel = @situation.renda - @situation.custo
-        @proxima_fatura = (@situation.total_devedor - @valor_disponivel) * (1+(@situation.juros/100))
+      
+        # Valor restante para quitar a dívida
+        if @situation.renda - @situation.custo <= 0
+        	format.html { render "problem" }
+        end
         
-        if @proxima_fatura > @valor_disponivel
+        # Calcula a sua dívida (divida passada + fatura desse mes)
+        @divida = (@situation.total_devedor) * (1+(@situation.juros/100)) + @situation.fatura
+        
+        # Verifica se você consegue pagar a dívida em apenas 1 mês
+        if @divida > @valor_disponivel
           format.html { render "multiple_months" }
         else
           format.html { render "single_month" }
-        end        
+        end
+        
       else
         format.html { render action: "index" }
       end

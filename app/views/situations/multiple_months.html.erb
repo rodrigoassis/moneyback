@@ -1,46 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-	Sua situação é a seguinte:
-</p>
-<p>
-  <b>Renda:</b>
-  R$ <%= @situation.renda %>
-</p>
-
-<p>
-  <b>Custo:</b>
-  R$ <%= @situation.custo %>
-</p>
-
-<p>
-  <b>Total devedor:</b>
-  R$ <%= @situation.total_devedor %>
-</p>
-
-<p>
-  <b>Juros:</b>
-  R$ <%= @situation.juros %>
-</p>
-
-<p>
-  <b>Minimo fatura:</b>
-  R$ <%= @situation.minimo_fatura %>
-</p>
-
-<hr>
+<%= render 'situation' %>
 
 <h1>Passo 1:</h1>
 <p>
 	Pare de realizar compras desnecessárias.<br />
-	Tenha apenas os gastos fixos!
+	Tenha apenas os gastos fixos.
 </p>
 
 <h1>Passo 2:</h1>
 <p>
-	Pague o mínimo da próxima fatura com o valor que você possui restante.<br />
-	<b>Proxima Fatura:</b>
- 	R$ <%= @proxima_fatura %>
+	Pague o maior valor possível da sua dívida com o valor que você possui restante.<br />
+	<b>Dívida:</b>
+ 	R$ <%= @divida %>
  	<br />
  	<b>Total a pagar:</b>
  	R$ <%= @valor_disponivel %>

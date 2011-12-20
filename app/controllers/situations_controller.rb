@@ -19,7 +19,8 @@ class SituationsController < ApplicationController
       if @situation.save
       
         # Valor restante para quitar a dívida
-        if @situation.renda - @situation.custo <= 0
+        @valor_disponivel = @situation.renda - @situation.custo
+        if @valor_disponivel <= 0
         	format.html { render "problem" }
         end
         

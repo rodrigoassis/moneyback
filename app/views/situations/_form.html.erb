@@ -1,7 +1,7 @@
 <%= form_for(@situation) do |f| %>
   <% if @situation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@situation.errors.count, "erro") %> pro√≠bem de avaliarmos a sua d√≠vida:</h2>
+      <h2><%= pluralize(@situation.errors.count, "erro") %> no formulário proíbem de avaliarmos a sua dívida:</h2>
 
       <ul>
       <% @situation.errors.full_messages.each do |msg| %>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :renda, "Renda Dispon√≠vel" %><br />
+    <%= f.label :renda, "Renda Disponível" %><br />
     R$ <%= f.text_field :renda %>
   </div>
   <div class="field">
@@ -20,19 +20,19 @@
     R$ <%= f.text_field :custo %>
   </div>
   <div class="field">
-    <%= f.label :total_devedor, "Total da sua d√≠vida com o Cart√£o" %><br />
+    <%= f.label :total_devedor, "Total da sua dívida com o Cartão" %><br />
     R$ <%= f.text_field :total_devedor %>
   </div>
   <div class="field">
-    <%= f.label :fatura, "Fatura deste m√™s do cart√£o" %><br />
+    <%= f.label :fatura, "Fatura deste mês do cartão" %><br />
     R$ <%= f.text_field :fatura %>
   </div>
   <div class="field">
-    <%= f.label :juros, "Juros do cart√£o" %><br />
+    <%= f.label :juros, "Juros do cartão" %><br />
     % <%= f.text_field :juros %>
   </div>
   <div class="field">
-    <%= f.label :minimo_fatura, "M√≠nimo a ser pago pela fatura" %><br />
+    <%= f.label :minimo_fatura, "Mínimo a ser pago pela fatura" %><br />
     R$ <%= f.text_field :minimo_fatura %>
   </div>
   <div class="actions">
